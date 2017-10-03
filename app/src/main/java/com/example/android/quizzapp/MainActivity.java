@@ -15,15 +15,18 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton firstAnswer;
-    RadioButton secondAnswer;
-    RadioButton thirdAnswer;
-    RadioButton fourthAnswer;
-    CheckBox secondQuestionFirstAnswer;
-    CheckBox secondQuestionSecondAnswer;
-    CheckBox secondQuestionThirdAnswer;
-    EditText thirdQuestion;
-    Button submit;
+    private RadioButton firstAnswer;
+    private RadioButton secondAnswer;
+    private RadioButton thirdAnswer;
+    private RadioButton fourthAnswer;
+    private RadioButton lastQuestionFirstAnswer;
+    private RadioButton lastQuestionSecondAnswer;
+    private RadioButton lastQuestionThirdAnswer;
+    private CheckBox secondQuestionFirstAnswer;
+    private CheckBox secondQuestionSecondAnswer;
+    private CheckBox secondQuestionThirdAnswer;
+    private EditText thirdQuestion;
+    private Button submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         secondAnswer = (RadioButton) findViewById(R.id.second_answer_radio_button);
         thirdAnswer = (RadioButton) findViewById(R.id.third_answer_radio_button);
         fourthAnswer = (RadioButton) findViewById(R.id.fourth_answer_radio_button);
+        lastQuestionFirstAnswer = (RadioButton) findViewById(R.id.first_answer_radio_button2);
+        lastQuestionSecondAnswer = (RadioButton) findViewById(R.id.second_answer_radio_button2);
+        lastQuestionThirdAnswer = (RadioButton) findViewById(R.id.third_answer_radio_button2);
         secondQuestionFirstAnswer = (CheckBox) findViewById(R.id.first_answer_checkbox);
         secondQuestionSecondAnswer = (CheckBox) findViewById(R.id.second_answer_checkbox);
         secondQuestionThirdAnswer = (CheckBox) findViewById(R.id.third_answer_checkbox);
@@ -53,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 score++;
             if(thirdQuestion.getText().toString().toLowerCase().equals("chuck norris"))
                 score++;
+            if(lastQuestionFirstAnswer.isChecked())
+                score++;
 
-            Toast.makeText(MainActivity.this, "Total Point " + score +"/3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Total Point " + score +"/4", Toast.LENGTH_SHORT).show();
         }
     };
 }

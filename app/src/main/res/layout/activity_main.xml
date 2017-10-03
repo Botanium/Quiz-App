@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
@@ -26,90 +25,126 @@
             android:scaleType="fitCenter"
             android:src="@drawable/historicalfacts" />
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:text="@string/wwi_happened_in"
-            android:textSize="20sp"
-            android:layout_marginStart="16dp"/>
+            android:textSize="20sp" />
+
         <RadioGroup
             android:id="@+id/first_question_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <RadioButton
                 android:id="@+id/first_answer_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1900"/>
+                android:text="@string/_1900" />
+
             <RadioButton
                 android:id="@+id/second_answer_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1914"/>
+                android:text="@string/_1914" />
+
             <RadioButton
                 android:id="@+id/third_answer_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1915"/>
+                android:text="@string/_1915" />
+
             <RadioButton
                 android:id="@+id/fourth_answer_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1918"/>
+                android:text="@string/_1918" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/black"/>
+            android:background="@android:color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Astronaut who went to moon before Appolo Mission"
-            android:textSize="20dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:text="@string/astronaut_who_went_to_moon_before_appolo_mission"
+            android:textSize="20sp" />
+
         <CheckBox
             android:id="@+id/first_answer_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Buzz Aldrin"/>
+            android:text="@string/buzz_aldrin" />
 
         <CheckBox
             android:id="@+id/second_answer_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Neil Armstrong"/>
+            android:text="@string/neil_armstrong" />
 
         <CheckBox
             android:id="@+id/third_answer_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chuck Norris"/>
+            android:text="@string/chuck_norris" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/black"/>
+            android:background="@android:color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="When Alexander Graham Bell invented the telephone he had three missed calls from"
-            android:textSize="20dp"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:text="@string/when_alexander_graham_bell_invented_the_telephone_he_had_three_missed_calls_from"
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/third_question_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your Answer Here"/>
+            android:hint="@string/type_your_answer_here" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/wwii_happened_in"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/forth_question_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/first_answer_radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_21900" />
+
+            <RadioButton
+                android:id="@+id/second_answer_radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_21914" />
+
+            <RadioButton
+                android:id="@+id/third_answer_radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_21915" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="submit" />
+            android:text="@string/submit" />
     </LinearLayout>
 </ScrollView>
