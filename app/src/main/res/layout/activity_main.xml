@@ -7,8 +7,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="1"
         tools:context="com.example.android.quizzapp.MainActivity">
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Historical Facts"
+            android:text="@string/historical_facts"
             android:textSize="33sp" />
 
         <ImageView
@@ -30,9 +30,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WWI happened in? "
-            android:textSize="20dp"
-            android:layout_marginLeft="16dp"/>
+            android:text="@string/wwi_happened_in"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"/>
         <RadioGroup
             android:id="@+id/first_question_radio_group"
             android:layout_width="wrap_content"
