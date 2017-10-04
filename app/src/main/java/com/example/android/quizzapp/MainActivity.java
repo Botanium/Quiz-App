@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // function to check if the any checkbox is checked and return the valus for validation
     private boolean checkCheckBox(CheckBox... checkBoxes){
         for (CheckBox checkBox: checkBoxes){
             checkBox.isChecked();
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            // checking if all the questions are answered.
             if(checkCheckBox(secondQuestionFirstAnswer, secondQuestionSecondAnswer, secondQuestionThirdAnswer) && thirdQuestion.length() > 0 && firstQuestion.getCheckedRadioButtonId() !=-1 && lastQuesiton.getCheckedRadioButtonId() !=-1) {
                 int score = 0;
                 if (secondAnswer.isChecked())
@@ -77,9 +78,10 @@ public class MainActivity extends AppCompatActivity {
                     score++;
                 if (lastQuestionFirstAnswer.isChecked())
                     score++;
-
+                // if all the questions are answered then calculate
                 Toast.makeText(MainActivity.this, "Total Point " + score + "/4", Toast.LENGTH_SHORT).show();
             }
+            //tell the user to answer all the questions
             else
                 Toast.makeText(MainActivity.this, "Please Answer All Questions", Toast.LENGTH_SHORT).show();
         }
