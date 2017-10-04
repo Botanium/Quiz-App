@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox secondQuestionThirdAnswer;
     private EditText thirdQuestion;
     private Button submit;
+
+    private RadioGroup firstQuestion;
+    private RadioGroup lastQuesiton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,26 +47,41 @@ public class MainActivity extends AppCompatActivity {
         secondQuestionSecondAnswer = (CheckBox) findViewById(R.id.second_answer_checkbox);
         secondQuestionThirdAnswer = (CheckBox) findViewById(R.id.third_answer_checkbox);
         thirdQuestion = (EditText) findViewById(R.id.third_question_edit_text);
+        firstQuestion = (RadioGroup) findViewById(R.id.first_question_radio_group);
+        lastQuesiton = (RadioGroup) findViewById(R.id.forth_question_radio_group);
         submit = (Button) findViewById(R.id.submit);
 
         submit.setOnClickListener(onClickListener);
 
     }
 
+    private boolean checkCheckBox(CheckBox... checkBoxes){
+        for (CheckBox checkBox: checkBoxes){
+            checkBox.isChecked();
+            return true;
+        }
+        return false;
+    }
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            int score = 0;
-            if(secondAnswer.isChecked())
-                score++;
-            if(secondQuestionThirdAnswer.isChecked())
-                score++;
-            if(thirdQuestion.getText().toString().toLowerCase().equals("chuck norris"))
-                score++;
-            if(lastQuestionFirstAnswer.isChecked())
-                score++;
 
-            Toast.makeText(MainActivity.this, "Total Point " + score +"/4", Toast.LENGTH_SHORT).show();
+            if(checkCheckBox(secondQuestionFirstAnswer, secondQuestionSecondAnswer, secondQuestionThirdAnswer) && thirdQuestion.length() > 0 && firstQuestion.getCheckedRadioButtonId() !=-1 && lastQuesiton.getCheckedRadioButtonId() !=-1) {
+                int score = 0;
+                if (secondAnswer.isChecked())
+                    score++;
+                if (secondQuestionThirdAnswer.isChecked())
+                    score++;
+                if (thirdQuestion.getText().toString().equalsIgnoreCase("chuck norris"))
+                    score++;
+                if (lastQuestionFirstAnswer.isChecked())
+                    score++;
+
+                Toast.makeText(MainActivity.this, "Total Point " + score + "/4", Toast.LENGTH_SHORT).show();
+            }
+            else
+                Toast.makeText(MainActivity.this, "Please Answer All Questions", Toast.LENGTH_SHORT).show();
         }
     };
 }
