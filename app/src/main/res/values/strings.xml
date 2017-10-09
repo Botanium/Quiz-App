@@ -2,7 +2,7 @@
     <string name="app_name">Quizz App</string>
     <string name="historical_facts">Historical Facts</string>
     <string name="wwi_happened_in">WWI happened in?</string>
-    <string name="astronaut_who_went_to_moon_before_appolo_mission">Astronaut who went to moon before Appolo Mission</string>
+    <string name="astronaut_who_went_to_moon">Astronaut who went to moon</string>
     <string name="buzz_aldrin">Buzz Aldrin</string>
     <string name="neil_armstrong">Neil Armstrong</string>
     <string name="chuck_norris">Chuck Norris</string>

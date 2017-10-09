@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="@string/astronaut_who_went_to_moon_before_appolo_mission"
+            android:text="@string/astronaut_who_went_to_moon"
             android:textSize="20sp" />
 
         <CheckBox

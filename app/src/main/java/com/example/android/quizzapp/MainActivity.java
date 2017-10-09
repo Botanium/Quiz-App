@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 int score = 0;
                 if (secondAnswer.isChecked())
                     score++;
-                if (secondQuestionThirdAnswer.isChecked())
+                if (secondQuestionFirstAnswer.isChecked() && secondQuestionSecondAnswer.isChecked() && !secondQuestionThirdAnswer.isChecked())
                     score++;
                 if (thirdQuestion.getText().toString().equalsIgnoreCase("chuck norris"))
                     score++;
